@@ -5,7 +5,7 @@ import com.example.registerform.entity.User;
 
 public interface UserService {
 
-    UserDto save(User user) throws Exception;
+    UserDto save(User user);
 
     UserDto update(User user);
 
