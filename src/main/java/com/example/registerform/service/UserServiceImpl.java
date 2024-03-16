@@ -30,7 +30,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto update(User user) {
-        return null;
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ecommerce-service");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+
+        entityManager.persist(user);
+
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        entityManagerFactory.close();
+
+        return new UserDto(user.getName(), user.getEmail(), user.getCountry(), user.getRole());
+
     }
 
     @Override
