@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+</head>
+<body>
+<form action="servlet/Register" method="post">
+
+  Name:<input type="text" name="userName"/><br/><br/>
+  Password:<input type="password" name="userPass"/><br/><br/>
+  Email Id:<input type="email" name="userEmail"/><br/><br/>
+  Country:
+  <select name="userCountry">
+    <option>India</option>
+    <option>Pakistan</option>
+    <option>other</option>
+  </select>
+  <br/><br/>
+  Role: <br/><br/>
+  <select name="userRole">
+    <option>Admin</option>
+    <option>User</option>
+  </select>
+  <br/><br/>
+  Enter if Applying for Admin Role
+  Code:<input type="password" name="userPass"/><br/><br/>
+  <br/><br/>
+  <input type="submit" value="register"/>
+
+</form>
+
+</body>
+</html>
